@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+class Box
+{
+    int l=0, b=0;
+    public:
+        Box()
+        {
+            l = 0; b = 0;
+        }
+        Box(int length,int breadth)
+        {
+            l = length; b = breadth;
+        }
+bool operator==(const Box& B)
+{
+    if (l==B.l && b==B.b)
+        return true;
+    else
+        return false;
+}
+};
+int main()
+{
+    Box A;
+    Box B(1, 2);
+    cout <<(A==B);
+}
